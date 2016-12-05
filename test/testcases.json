@@ -1,0 +1,252 @@
+[
+  {
+    "it": "should get value of specified cell",
+    "input": [
+      "5,8,2,4,6,7,1,3,9",
+      "A6,F9",
+      "C"
+     ],
+    "output": ["2"]
+  },
+  {
+    "it": "should get value of specified cell",
+    "input": [
+      "17,13,19,9,18,14,8,7,12",
+      "H17,C18",
+      "E"
+     ],
+    "output": ["13"]
+  },
+  {
+    "it": "should get value of specified cell",
+    "input": [
+      "17,20,21,16,12,10,15,11,22",
+      "A15,I17,B22,G21",
+      "H"
+     ],
+    "output": ["10"]
+  },
+  {
+    "it": "should get value of specified cell",
+    "input": [
+      "47,29,71,17,5,101,113,89,59",
+      "B113,C17",
+      "A"
+     ],
+    "output": ["47"]
+  },
+  {
+    "it": "should get value of specified cell",
+    "input": [
+      "167,131,71,89,11,107,149,29,47",
+      "F167,I29",
+      "G"
+     ],
+    "output": ["107"]
+  },
+  {
+    "it": "should get right table when it has multiple answers",
+    "input": [
+      "29,89,41,101,83,71,59,53,113",
+      "E71",
+      "H"
+     ],
+    "output": ["89"]
+  },
+  {
+    "it": "should get right table when it has multiple answers",
+    "input": [
+      "139,109,37,79,181,211,151,67,7",
+      "E109",
+      "I"
+     ],
+    "output": ["79"]
+  },
+  {
+    "it": "should get right table when it has multiple answers",
+    "input": [
+      "43,157,13,73,241,97,127,181,211",
+      "I97",
+      "B"
+     ],
+    "output": ["13"]
+  },
+  {
+    "it": "should get right table when it has multiple answers",
+    "input": [
+      "157,103,211,151,127,181,43,97,73",
+      "D211,F43",
+      "H"
+     ],
+    "output": ["103"]
+  },
+  {
+    "it": "should get right table when it has multiple answers",
+    "input": [
+      "263,83,47,11,101,173,191,227,137",
+      "H11",
+      "D"
+     ],
+    "output": ["191"]
+  },
+  {
+    "it": "should print correct table",
+    "input": [
+      "5,2,4,6,7,9,3,8,1",
+      "E5"
+    ],
+    "output": [
+      "2 7 6",
+      "9 5 1",
+      "4 3 8"
+    ]
+  },
+  {
+    "it": "should print correct table",
+    "input": [
+      "14,18,12,17,8,9,7,19,13",
+      "A18"
+    ],
+    "output": [
+      "18  7 14",
+      " 9 13 17",
+      "12 19  8"
+    ]
+  },
+  {
+    "it": "should print correct table",
+    "input": [
+      "17,113,47,101,59,71,89,29,5",
+      "C101,G17"
+    ],
+    "output": [
+      " 47  29 101",
+      "113  59   5",
+      " 17  89  71"
+    ]
+  },
+  {
+    "it": "shoud continue process with longer range",
+    "input": [
+      "113,59,83,41,101,29,53,71,89,ab,1930,1",
+      "C41,F89",
+      "A"
+    ],
+    "output": [
+      "Using first 9 items: 113,59,83,41,101,29,53,71,89",
+      "59"
+    ]
+  },
+  {
+    "it": "shoud continue process with longer range",
+    "input": [
+      "5,2,4,6,7,9,3,8,1,1,abc,edj",
+      "E5,D1,B7"
+    ],
+    "output": [
+      "Using fist 9 items: 5,2,4,6,7,9,3,8,1",
+      "6 7 2",
+      "1 5 9",
+      "8 3 4"
+    ]
+  },
+  {
+    "it": "should show error on invalid length",
+    "input": [
+      "4,3,7,9,5,6,1,8",
+      "B7",
+      "H"
+     ],
+    "output": [ "Invalid Length: 1 more item(s) needed" ]
+  },
+  {
+    "it": "should show error on invalid length",
+    "input": [
+      "18,14,8,13,9,19,7",
+      "H19,I8",
+      "B"
+     ],
+    "output": [ "Invalid Length: 2 more item(s) needed" ]
+  },
+  {
+    "it": "should show error on invalid argument",
+    "input": [
+      "a,11,22,15,20,10,17,12,16",
+      "G11",
+      "C"
+     ],
+    "output": [ "Invalid Value: a" ]
+  },
+  {
+    "it": "should show error on invalid argument",
+    "input": [
+      "11,abcd,29,149,131,107,89,47,167,71,21,abi",
+      "C71,E89,G107",
+      "H"
+     ],
+    "output": [
+      "Using first 9 items: 11,abcd,29,149,131,107,89,47,167",
+      "Invalid Value: abcd"
+    ]
+  },
+  {
+    "it": "should show error on invalid argument",
+    "input": [
+      "11,101,227,83,263,173,47,137,191",
+      "A101,G27"
+    ],
+    "output": ["Invalid Value: G27"]
+  },
+  {
+    "it": "should show error on invalid argument",
+    "input": [
+      "157,103,211,151,127,181,43,97,73,1,6,4",
+      "D1,6,J157",
+      "H"
+    ],
+    "output": [
+      "Using first 9 items: 157,103,211,151,127,181,43,97,73",
+      "Invalid Value: D1,6,J157"
+    ]
+  },
+  {
+    "it": "should show error on invalid operation",
+    "input": [
+      "67,151,79,181,109,37,139,7,211",
+      "A37,F7",
+      "5"
+     ],
+    "output": [ "Invalid Operation" ]
+  },
+  {
+    "it": "should show error on invalid operation",
+    "input": [
+      "83,173,47,137,227,263,101,11,191,invalid,range",
+      "A227,H191",
+      "M"
+     ],
+    "output": [
+      "Using first 9 items: 83,173,47,137,227,263,101,11,191",
+      "Invalid Operation"
+    ]
+  },
+  {
+    "it": "should find out inconsistent initialization",
+    "input": [
+      "8,12,19,9,13,18,7,14,17",
+      "E19"
+    ],
+    "output": ["Inconsistent Initialization"]
+  },
+  {
+    "it": "should find out inconsistent initialization",
+    "input": [
+      "113,71,17,59,47,101,29,5,89,abc,j,192",
+      "G5"
+    ],
+    "output": [
+      "Using first 9 items: 83,173,47,137,227,263,101,11,191",
+      "Inconsistent Initialization"
+    ]
+  }
+]
